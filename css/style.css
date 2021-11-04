@@ -1,0 +1,196 @@
+body {
+    background: hsla(206, 88%, 30%, 0.144);
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    overflow: hidden;
+    background: #252932;
+    margin-bottom: 20px;
+}
+
+.listaa {
+    overflow: hidden;
+    background: #f2f2f2;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 30px;
+    text-align: center;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header .logo {
+    color: #f2f2f2;
+    font-size: 50px;
+    line-height: 200px;
+    float: left;
+}
+
+header nav {
+    float: right;
+    line-height: 200px;
+}
+
+header nav a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+header nav a:hover {
+    background: #D07BD5;
+    border-radius: 50px;
+}
+
+.header2 {
+    position: fixed;
+    height: 100px;
+}
+
+.header2 .logo {
+    line-height: 100px;
+    font-size: 30px;
+}
+
+.header2 nav {
+    line-height: 100px;
+}
+
+.contenido {
+    padding-top: 100px;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 100px;
+}
+
+p {
+    padding-top: 15px;
+}
+
+@media screen and (max-width: 950px) {
+    header .logo,
+    header nav {
+        width: 100px;
+        text-align: center;
+        line-height: 100px;
+    }
+    .header2 {
+        height: auto;
+    }
+    .header2 .logo,
+    .header2 nav {
+        line-height: 50px;
+    }
+}
+
+
+/* Categorias*/
+
+
+/*botones*/
+
+.botones {
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 200px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    transition: all 500ms ease;
+    border: 2px solid #33a19c;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.botonGuardar {
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    transition: all 500ms ease;
+    border: 2px solid #038033;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.botonCancelar {
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    transition: all 500ms ease;
+    border: 2px solid #c00404;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.botonEditar {
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 80px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: black;
+    font-size: 10px;
+    transition: all 500ms ease;
+    border: 2px solid #c00404;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.botonBorrar {
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 80px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: black;
+    font-size: 10px;
+    transition: all 500ms ease;
+    border: 2px solid #c00404;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+tbody {
+    align-items: center;
+}

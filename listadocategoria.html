@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de ...</title>
+    <!--
+    <script src="js/jquery-3.6.0.min.js"></script>
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/listarcategorias.js"></script>
+    <script src="js/registrarcategoria.js"></script>
+    <script src="js/editarcategoria.js"></script>
+    <script src="js/borrarcategoria.js"></script>
+    <script src="js/funcionescategoria.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/header.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div>
+        <header class="header2">
+            <div class="wrapper">
+                <div class="logo">
+                    Renta de botes
+                </div>
+                <nav>
+                    <a href="index.html">Inicio</a>
+                    <a href="listadocategoria.html">Categorias</a>
+                    <a href="listado.html">Botes</a>
+                    <a href="listadoclientes.html">Clientes</a>
+                    <a href="listadomensajes.html">Mensajes</a>
+                    <a href="listadoreservas.html">Reservas</a>
+                </nav>
+            </div>
+        </header>
+        <div class="listaa">
+            <h1>Categorías Disponibles</h1>
+
+            <!-- en el elemento identificado con el id 'mensajes' se mostraran los mensajes
+             o resultado de ejecutar la peticion
+        -->
+            <div id="mensajes"></div>
+            <br>
+
+
+            <button class="botones" id="nuevoRegistro" onclick="activaNuevo();">Registrar Categoría</button>
+            <!--aqui se actualizara el listado -->
+            <div id="listado"></div>
+
+            <!-- Seccion para nuevos registros-->
+            <div id="nuevo">
+                <h3>Registrar Categoría</h3>
+                <input type="text" id="name" placeholder="name" onkeydown="upperCaseF(this)">
+                <br> <br>
+                <textarea id="description" placeholder="description" rows="4" cols="50" onkeydown="upperCaseF(this)"></textarea>
+                <br> <br>
+                <button class="botonGuardar" onclick="registrar();">Guardar</button>
+                <button class="botonCancelar" onclick="estadoInicial();">Cancelar</button>
+            </div>
+
+
+            <!-- Seccion para editar registros-->
+            <div id="editar">
+                <h3>Editar Categoría</h3>
+                <input type="text" id="idEdit" placeholder="id">
+                <input type="text" id="nameEdit" placeholder="name" onkeydown="upperCaseF(this)">
+                <br> <br>
+                <textarea id="descriptionEdit" placeholder="description" rows="4" cols="50" onkeydown="upperCaseF(this)"></textarea>
+                <br> <br>
+                <button class="botonGuardar" onclick="actualizar();">Guardar</button>
+                <button class="botonCancelar" onclick="estadoInicial();">Cancelar</button>
+            </div>
+
+            <!-- Seccion para confirmar eliminaciòn de registros-->
+            <div id="eliminar">
+                <h3 id="titleIdDelete"></h3>
+                <input type="number" id="idDelete" placeholder="id">
+                <p id="categoryDelete"></p>
+                <br>
+                <button class="botonGuardar" onclick="borrarRegistro(idDelete.value);">Aceptar</button>
+                <button class="botonCancelar" onclick="estadoInicial();">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

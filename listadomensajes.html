@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de ...</title>
+    <!--
+    <script src="js/jquery-3.6.0.min.js"></script>
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/listas/listas.js"></script>
+    <script src="js/listarmensajes.js"></script>
+    <script src="js/registrarmensajes.js"></script>
+    <script src="js/editarmensajes.js"></script>
+    <script src="js/borrarmensajes.js"></script>
+    <script src="js/funcionesmensajes.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/header.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div>
+        <header class="header2">
+            <div class="wrapper">
+                <div class="logo">
+                    Renta de botes
+                </div>
+                <nav>
+                    <a href="index.html">Inicio</a>
+                    <a href="listadocategoria.html">Categorias</a>
+                    <a href="listado.html">Botes</a>
+                    <a href="listadoclientes.html">Clientes</a>
+                    <a href="listadomensajes.html">Mensajes</a>
+                    <a href="listadoreservas.html">Reservas</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="listaa">
+            <h1>Mensajes Disponibles</h1>
+
+            <!-- en el elemento identificado con el id 'mensajes' se mostraran los mensajes
+             o resultado de ejecutar la peticion
+        -->
+            <div id="mensajes"></div>
+            <br>
+            <button class="botones" id="nuevoRegistro" onclick="activaNuevo();">Registrar Mensaje</button>
+            <!--aqui se actualizara el listado -->
+            <div id="listado"></div>
+
+            <!--Sección para eliminar registros-->
+            <div id="eliminar">
+                <h3 id="titleIdDelete"></h3>
+                <input type="number" id="idDelete" placeholder="id">
+                <p id="messagetextDelete" placeholder="messagetext"></p>
+                <br>
+                <button class="botonGuardar" onclick="borrarRegistro(idDelete.value);">Aceptar</button>
+                <button class="botonCancelar" onclick="estadoInicial();">Cancelar</button>
+            </div>
+
+            <!-- Seccion para nuevos registros-->
+            <div id="nuevo">
+                <h3>Registrar Mensaje</h3>
+                <br><br>
+                <select id="client" placeholder="Cliente">
+                
+            </select>
+                <br><br>
+                <select id="boat" placeholder="Bote">
+                
+            </select>
+                <br><br>
+                <textarea id="messagetext" placeholder="messagetext" rows="4" cols="50" onkeydown="upperCaseF(this)"></textarea>
+                <br>
+                <button class="botonGuardar" onclick="registrar();">Guardar</button>
+                <button class="botonCancelar" onclick="estadoInicial();">Cancelar</button>
+            </div>
+
+
+            <!-- Seccion para editar registros-->
+            <div id="editar">
+                <h3>Editar Mensaje</h3>
+                <input type="number" id="idEdit" placeholder="id">
+
+                <p id="clientEdit"></p>
+                <p id="boatEdit"></p>
+                <textarea id="messagetextEdit" placeholder="messagetext" rows="4" cols="50"></textarea>
+                <br>
+                <button class="botonGuardar" onclick="actualizar();">Guardar</button>
+                <button class="botonCancelar" onclick="estadoInicial();">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
