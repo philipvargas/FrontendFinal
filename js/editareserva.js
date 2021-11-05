@@ -13,7 +13,7 @@
 
     $.ajax({
         // la URL para la petición (url: "url al recurso o endpoint")
-        url: "http://localhost:8081/api/Reservation/" + llaveRegistro,
+        url: "http://129.151.125.65:8081/api/Reservation/" + llaveRegistro,
 
         // la información a enviar
         // (también es posible utilizar una cadena de datos)
@@ -96,7 +96,7 @@ function actualizar() {
     if (validarEditar()) {
         $.ajax({
             // la URL para la petición (url: "url al recurso o endpoint")
-            url: "http://localhost:8081/api/Reservation/update",
+            url: "http://129.151.125.65:8081/api/Reservation/update",
 
             // la información a enviar
             // (también es posible utilizar una cadena de datos)
