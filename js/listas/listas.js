@@ -13,7 +13,7 @@
  function listarCategorias() {
     $.ajax({
         // la URL para la petición (url: "url al recurso o endpoint")
-        url: "http://localhost:8081/api/Category/all",
+        url: "http://129.151.125.65:8081/api/Category/all",
         
         // especifica el tipo de petición http: POST, GET, PUT, DELETE
         type: 'GET',
@@ -67,7 +67,7 @@ function armaListaCategorias(items) {
  function listarClientes() {
     $.ajax({
         // la URL para la petición (url: "url al recurso o endpoint")
-        url: "http://localhost:8081/api/Client/all",
+        url: "http://129.151.125.65:8081/api/Client/all",
         
         // especifica el tipo de petición http: POST, GET, PUT, DELETE
         type: 'GET',
@@ -131,7 +131,7 @@ function armaListaClientes(items) {
 function listarBotes() {
     $.ajax({
         // la URL para la petición (url: "url al recurso o endpoint")
-        url: "http://localhost:8081/api/Boat/all",
+        url: "http://129.151.125.65:8081/api/Boat/all",
         
         // especifica el tipo de petición http: POST, GET, PUT, DELETE
         type: 'GET',
@@ -153,7 +153,7 @@ function listarBotes() {
         // son pasados como argumentos a la función
         // el objeto de la petición en crudo y código de estatus de la petición
         error: function (xhr, status) {
-            $("#mensajes").html("Ocurrio un problema al generar la lsita de Botecletas...");
+            $("#mensajes").html("Ocurrio un problema al generar la lista de Botes...");
             $("#mensajes").show(1000);
         }
     });
