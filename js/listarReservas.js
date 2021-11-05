@@ -17,7 +17,7 @@ function listar() {
     $.ajax({
         // la URL para la petición (url: "url al recurso o endpoint")
         //url: "http://localhost:8081/api/Reservation/all",
-        url: "http://localhost:8081/api/Reservation/all",
+        url: "http://129.151.125.65:8081/api/Reservation/all",
 
         // la información a enviar
         // (también es posible utilizar una cadena de datos)
